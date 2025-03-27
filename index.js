@@ -54,10 +54,7 @@ app.post('/echo', (req, res) => {
 });
 
 app.post('/echos', (req, res) => {
-    res.json({
-        status: 'success',
-        received: req.body
-    });
+    res.send(req.body)
 });
 
 // 3. REST endpoint with Basic Auth
