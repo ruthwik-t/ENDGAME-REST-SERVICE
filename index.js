@@ -45,6 +45,14 @@ app.delete('/json/delete', (req, res) => {
     res.json({ message: 'Hello from DELETE JSON' });
 });
 
+// Endpoint that echoes back the request as response
+app.post('/echo', (req, res) => {
+    res.json({
+        status: 'success',
+        received: req.body
+    });
+});
+
 // 3. REST endpoint with Basic Auth
 app.get('/basic-auth', (req, res) => {
     const auth = req.headers['authorization'];
