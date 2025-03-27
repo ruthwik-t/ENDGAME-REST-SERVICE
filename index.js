@@ -53,10 +53,9 @@ app.post('/echo', (req, res) => {
     });
 });
 
-app.post('/echos', (req, res) => {
-    console.log(req.body)
+app.get('/echos', (req, res) => {
     res.set('Content-Type', 'application/xml');
-    res.send(req.body)
+    res.send("<employees><employee><id>101</id><name>John Doe</name><department>Engineering</department></employee><employee><id>102</id><name>Jane Smith</name><department>Marketing</department></employee></employees>")
 });
 
 // 3. REST endpoint with Basic Auth
