@@ -54,6 +54,7 @@ app.post('/echo', (req, res) => {
 });
 
 app.post('/echos', (req, res) => {
+    console.log(req.body)
     res.set('Content-Type', 'application/xml');
     res.send(req.body)
 });
